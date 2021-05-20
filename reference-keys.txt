@@ -1,6 +1,16 @@
 about-bioconductor
 intro
-literature
+general-package-development
+version-of-bioconductor-and-r
+correctness-space-and-time
+r-cmd-build
+bioccheck
+file-names
+package-size
+check-duration
+memory
+individual-file-size
+undesirable-files
 methods
 applications
 example-one
