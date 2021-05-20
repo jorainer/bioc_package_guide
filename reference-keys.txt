@@ -11,8 +11,6 @@ check-duration
 memory
 individual-file-size
 undesirable-files
+r-cmd-check-environment
+readme-file
 methods
-applications
-example-one
-example-two
-final-words
