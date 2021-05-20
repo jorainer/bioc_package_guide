@@ -34,7 +34,7 @@
 <li><a class="" href="index.html"><span class="header-section-number">1</span> About Bioconductor</a></li>
 <li><a class="" href="intro.html"><span class="header-section-number">2</span> Introduction</a></li>
 <li><a class="active" href="general-package-development.html"><span class="header-section-number">3</span> General Package Development</a></li>
-<li><a class="" href="methods.html"><span class="header-section-number">4</span> Methods</a></li>
+<li><a class="" href="the-description-file.html"><span class="header-section-number">4</span> The DESCRIPTION file</a></li>
 </ul>
 
         <div class="book-extra">
@@ -124,7 +124,7 @@ These files may be present in your local directory but should not be commited to
 Options can be set as individual environment variables or they can be <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Checking-and-building-packages">listed in a file</a>.
 Descriptions of all the different options available can be found <a href="https://cran.r-project.org/doc/manuals/r-devel/R-ints.html#Tools">here</a>.
 <a href="https://bioconductor.org/"><em>Bioconductor</em></a> has chosen to customize some of these options for incoming submission during <code>R CMD check</code>.
-The file of utilized flags can be downloaded from <a href="https://github.com/Bioconductor/packagebuilder/blob/master/check.Renviron">Github</a>.
+The file of utilized flags can be downloaded from <a href="https://github.com/Bioconductor/packagebuilder/blob/master/check.Renviron"><i class="fab fa-github"></i> GitHub</a>.
 The file can either be placed in a default directory as directed <a href="https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Checking-and-building-packages">here</a> or can be set through environment variable <code>R_CHECK_ENVIRON</code> with a command similar to:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="general-package-development.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">R_CHECK_ENVIRON</span> <span class="va">=</span> <span class="op">&lt;</span>path <span class="va">to</span> <span class="va">downloaded</span> <span class="va">file</span><span class="op">&gt;</span></span></code></pre></div>
 </div>
@@ -132,7 +132,7 @@ The file can either be placed in a default directory as directed <a href="https:
 <h2>
 <span class="header-section-number">3.4</span> README file<a class="anchor" aria-label="anchor" href="#readme-file"><i class="fas fa-link"></i></a>
 </h2>
-<p>If a <code>README</code> file is included in the package or the GitHub repository and it provides installation instructions, those instruction should also include <a href="https://bioconductor.org/"><em>Bioconductor</em></a> installation instructions.</p>
+<p>If a <code>README</code> file is included in the package or the <i class="fab fa-github"></i> Github repository and it provides installation instructions, those instruction should also include <a href="https://bioconductor.org/"><em>Bioconductor</em></a> installation instructions.</p>
 <p>If a <code>README.Rmd</code> is provided (rather than <code>README.md</code>, or other) those installation instructions should be in an <code>eval=FALSE</code> code chunk.</p>
 <p>Nowhere in the code (R code, man pages, vignettes, Rmd files) should someone try to install or download system dependencies, applications, packages, etc.</p>
 <p>Developers can provide instructions to follow but not executed and should assume all necessary dependencies, applications, or packages are already set up on a user’s system.</p>
@@ -142,7 +142,7 @@ The file can either be placed in a default directory as directed <a href="https:
 
   <div class="chapter-nav">
 <div class="prev"><a href="intro.html"><span class="header-section-number">2</span> Introduction</a></div>
-<div class="next"><a href="methods.html"><span class="header-section-number">4</span> Methods</a></div>
+<div class="next"><a href="the-description-file.html"><span class="header-section-number">4</span> The DESCRIPTION file</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
