@@ -1,4 +1,4 @@
-prerequisites
+about-bioconductor
 intro
 literature
 methods
