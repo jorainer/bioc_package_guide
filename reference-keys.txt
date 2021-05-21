@@ -59,3 +59,16 @@ data-1
 examples
 the-instscript-directory
 tests
+r-code
+license-1
+r-cmd-check-and-bioccheck
+formatting-and-syntax
+re-use-functionality-and-classes
+functional-programming
+function-length
+function-arguments
+vectorization
+web-resources
+parallelisation
+file-caching
+additional-files-and-dependencies
