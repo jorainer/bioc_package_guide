@@ -1,4 +1,3 @@
-about-bioconductor
 intro
 general
 version-of-bioconductor-and
