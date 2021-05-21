@@ -36,3 +36,10 @@ imported-functions
 exported-functions
 the-news-file
 the-citation-file
+package-data
+experiment-data-package
+adding-data-to-existing-package
+exported-data-and-the-data-directory
+raw-data-and-the-instextdata-directory
+internal-data
+other-data
