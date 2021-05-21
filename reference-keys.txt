@@ -35,3 +35,4 @@ function-names
 imported-functions
 exported-functions
 the-news-file
+the-citation-file
