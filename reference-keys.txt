@@ -34,3 +34,4 @@ the-namespace-file
 function-names
 imported-functions
 exported-functions
+the-news-file
