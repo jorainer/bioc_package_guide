@@ -30,3 +30,7 @@ url
 video
 collates
 bioctype
+the-namespace-file
+function-names
+imported-functions
+exported-functions

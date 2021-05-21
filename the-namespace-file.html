@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 2 Introduction | Bioconductor Package Guidelines for Developers and Reviewers</title>
+<title>Chapter 5 The NAMESPACE file | Bioconductor Package Guidelines for Developers and Reviewers</title>
 <meta name="author" content="Kevin Rue-Albrecht">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.8/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -32,10 +32,10 @@
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
         <ul class="book-toc list-unstyled">
 <li><a class="" href="index.html"><span class="header-section-number">1</span> About Bioconductor</a></li>
-<li><a class="active" href="intro.html"><span class="header-section-number">2</span> Introduction</a></li>
+<li><a class="" href="intro.html"><span class="header-section-number">2</span> Introduction</a></li>
 <li><a class="" href="general-package-development.html"><span class="header-section-number">3</span> General Package Development</a></li>
 <li><a class="" href="the-description-file.html"><span class="header-section-number">4</span> The DESCRIPTION file</a></li>
-<li><a class="" href="the-namespace-file.html"><span class="header-section-number">5</span> The NAMESPACE file</a></li>
+<li><a class="active" href="the-namespace-file.html"><span class="header-section-number">5</span> The NAMESPACE file</a></li>
 <li><a class="" href="references.html">References</a></li>
 </ul>
 
@@ -44,27 +44,50 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="intro" class="section level1" number="2">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="the-namespace-file" class="section level1" number="5">
 <h1>
-<span class="header-section-number">2</span> Introduction<a class="anchor" aria-label="anchor" href="#intro"><i class="fas fa-link"></i></a>
+<span class="header-section-number">5</span> The NAMESPACE file<a class="anchor" aria-label="anchor" href="#the-namespace-file"><i class="fas fa-link"></i></a>
 </h1>
-<p>The <a href="https://bioconductor.org/"><em>Bioconductor</em></a> project promotes high-quality, well documented, and interoperable software. These guidelines help to achieve this objective; they are not meant to put undue burden on package authors, and authors having difficultly satisfying guidelines should seek advice on the <a href="https://bioconductor.org/help/support/">bioc-devel</a> mailing list.</p>
-<p>Package maintainers are urged to follow these guidelines as closely as possible when developing <a href="https://bioconductor.org/"><em>Bioconductor</em></a> packages.</p>
-<p>General instructions for producing packages can be found in the <a href="https://cran.r-project.org/doc/manuals/R-exts.html">Writing R Extensions</a> manual, available from within R (<code><a href="https://rdrr.io/r/utils/RShowDoc.html">RShowDoc("R-exts")</a></code>) or on the <a href="http://cran.fhcrc.org/manuals.html">R web site</a>.</p>
-<p>Remember these are the minimum requirements for package acceptance and the package will still be subject to other guidelines below and a formal technical review by trained <a href="https://bioconductor.org/"><em>Bioconductor</em></a> package reviewer.</p>
+<p>A <a href="http://cran.fhcrc.org/doc/manuals/R-exts.html#Package-namespaces">NAMESPACE</a> file defines the functions, classes, and methods that are imported into the namespace, and exported for users.</p>
+<p>In the following section we describe what <a href="https://bioconductor.org/"><em>Bioconductor</em></a> reviewers will be looking for in this file.</p>
+<div id="function-names" class="section level2" number="5.1">
+<h2>
+<span class="header-section-number">5.1</span> Function names<a class="anchor" aria-label="anchor" href="#function-names"><i class="fas fa-link"></i></a>
+</h2>
+<p>Exported functions should use camel case or underscoring and not include <code>.</code>, which indicates S3 dispatch.</p>
+</div>
+<div id="imported-functions" class="section level2" number="5.2">
+<h2>
+<span class="header-section-number">5.2</span> Imported functions<a class="anchor" aria-label="anchor" href="#imported-functions"><i class="fas fa-link"></i></a>
+</h2>
+<p>Generally <code>importFrom()</code> is encouraged over importing an entire package.
+However, if there are many functions from a single package, <code>import()</code> can be acceptable.</p>
+</div>
+<div id="exported-functions" class="section level2" number="5.3">
+<h2>
+<span class="header-section-number">5.3</span> Exported functions<a class="anchor" aria-label="anchor" href="#exported-functions"><i class="fas fa-link"></i></a>
+</h2>
+<p>Exporting all functions with <code>exportPattern("^[[:alpha:]]+")</code> is strongly discouraged.
+Functions and generics should be exported individually, for clarity and control.</p>
 
 </div>
+</div>
   <div class="chapter-nav">
-<div class="prev"><a href="index.html"><span class="header-section-number">1</span> About Bioconductor</a></div>
-<div class="next"><a href="general-package-development.html"><span class="header-section-number">3</span> General Package Development</a></div>
+<div class="prev"><a href="the-description-file.html"><span class="header-section-number">4</span> The DESCRIPTION file</a></div>
+<div class="next"><a href="references.html">References</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#intro"><span class="header-section-number">2</span> Introduction</a></li></ul>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#the-namespace-file"><span class="header-section-number">5</span> The NAMESPACE file</a></li>
+<li><a class="nav-link" href="#function-names"><span class="header-section-number">5.1</span> Function names</a></li>
+<li><a class="nav-link" href="#imported-functions"><span class="header-section-number">5.2</span> Imported functions</a></li>
+<li><a class="nav-link" href="#exported-functions"><span class="header-section-number">5.3</span> Exported functions</a></li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/kevinrue/bioc_package_guide/blob/master/01-intro.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/kevinrue/bioc_package_guide/edit/master/01-intro.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/kevinrue/bioc_package_guide/blob/master/04-namespace.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/kevinrue/bioc_package_guide/edit/master/04-namespace.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
