@@ -78,3 +78,7 @@ c-function-registration
 checks-for-user-interruption
 makevars
 warnings-and-optimizations
+third-party-code
+shiny
+gitignore
+conclusion

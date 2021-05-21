@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 10 Unit tests | Bioconductor Package Guidelines for Developers and Reviewers</title>
+<title>Chapter 14 Shiny apps | Bioconductor Package Guidelines for Developers and Reviewers</title>
 <meta name="author" content="Kevin Rue-Albrecht">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.8/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -40,11 +40,11 @@
 <li><a class="" href="citation.html"><span class="header-section-number">7</span> The CITATION file</a></li>
 <li><a class="" href="data.html"><span class="header-section-number">8</span> Package data</a></li>
 <li><a class="" href="docs.html"><span class="header-section-number">9</span> Documentation</a></li>
-<li><a class="active" href="tests.html"><span class="header-section-number">10</span> Unit tests</a></li>
+<li><a class="" href="tests.html"><span class="header-section-number">10</span> Unit tests</a></li>
 <li><a class="" href="r-code.html"><span class="header-section-number">11</span> R code</a></li>
 <li><a class="" href="c-fortran.html"><span class="header-section-number">12</span> C and Fortran code</a></li>
 <li><a class="" href="third-party-code.html"><span class="header-section-number">13</span> Third-party code</a></li>
-<li><a class="" href="shiny.html"><span class="header-section-number">14</span> Shiny apps</a></li>
+<li><a class="active" href="shiny.html"><span class="header-section-number">14</span> Shiny apps</a></li>
 <li><a class="" href="gitignore.html"><span class="header-section-number">15</span> The .gitignore file</a></li>
 <li><a class="" href="conclusion.html"><span class="header-section-number">16</span> Conclusion</a></li>
 <li><a class="" href="references-1.html">References</a></li>
@@ -55,29 +55,26 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="tests" class="section level1" number="10">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="shiny" class="section level1" number="14">
 <h1>
-<span class="header-section-number">10</span> Unit tests<a class="anchor" aria-label="anchor" href="#tests"><i class="fas fa-link"></i></a>
+<span class="header-section-number">14</span> Shiny apps<a class="anchor" aria-label="anchor" href="#shiny"><i class="fas fa-link"></i></a>
 </h1>
-<p>Unit tests are highly recommended.
-We find them indispensable for both package development and maintenance.</p>
-<p>Two of the main frameworks for testing are <em><a href="https://CRAN.R-project.org/package=RUnit">RUnit</a></em> and <em><a href="https://CRAN.R-project.org/package=testthat">testthat</a></em>.
-Examples and explanations are provided <a href="http://bioconductor.org/developers/unitTesting-guidelines">here</a>.</p>
-<p>There is also the opportunity to create a full testing suite more in depth than traditional testing guidelines but this will require the use of <a href="https://bioconductor.org/developers/how-to/long-tests">long tests</a>.
-If a package developer is considering the use of long tests we highly recommend reaching out on the bioc-devel mailing list to ensure proper use and justification.</p>
+<p><a href="https://shiny.rstudio.com/">Shiny apps</a> are allowable.</p>
+<p>Please have all relevant <i class="fab fa-r-project"></i> code in the main <code>R/</code> directory of the package.</p>
+<p>The bulk of the package code should <strong>not</strong> be implemented within the Shiny app directly.</p>
 
 </div>
   <div class="chapter-nav">
-<div class="prev"><a href="docs.html"><span class="header-section-number">9</span> Documentation</a></div>
-<div class="next"><a href="r-code.html"><span class="header-section-number">11</span> R code</a></div>
+<div class="prev"><a href="third-party-code.html"><span class="header-section-number">13</span> Third-party code</a></div>
+<div class="next"><a href="gitignore.html"><span class="header-section-number">15</span> The .gitignore file</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#tests"><span class="header-section-number">10</span> Unit tests</a></li></ul>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#shiny"><span class="header-section-number">14</span> Shiny apps</a></li></ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/kevinrue/bioc_package_guide/blob/master/09-tests.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/kevinrue/bioc_package_guide/edit/master/09-tests.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+<li><a id="book-source" href="https://github.com/kevinrue/bioc_package_guide/blob/master/13-shiny.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/kevinrue/bioc_package_guide/edit/master/13-shiny.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
