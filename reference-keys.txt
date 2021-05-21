@@ -58,3 +58,4 @@ package-level-documentation
 data-1
 examples
 the-instscript-directory
+tests
