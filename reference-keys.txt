@@ -72,3 +72,9 @@ web-resources
 parallelisation
 file-caching
 additional-files-and-dependencies
+c-fortran
+internal-functions
+c-function-registration
+checks-for-user-interruption
+makevars
+warnings-and-optimizations
