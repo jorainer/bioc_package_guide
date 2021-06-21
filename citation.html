@@ -6,7 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 6 The CITATION file | Bioconductor Package Guidelines for Developers and Reviewers</title>
 <meta name="author" content="Kevin Rue-Albrecht">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.8/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Daniela Cassol">
+<meta name="author" content="Johannes Rainer">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.2"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.9/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.2.5.1/tabs.js"></script><script src="libs/bs3compat-0.2.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script><!-- CSS -->
@@ -49,8 +51,9 @@
 <li><a class="" href="conclusion.html"><span class="header-section-number">15</span> Conclusion</a></li>
 <li><a class="" href="references-1.html">References</a></li>
 <li><a class="" href="changelog.html">Changelog</a></li>
+<li><a class="" href="news-1.html"><span class="header-section-number">16</span> NEWS</a></li>
 <li class="book-part">Appendix</li>
-<li><a class="" href="news-1.html"><span class="header-section-number">A</span> NEWS</a></li>
+<li><a class="" href="booknews.html"><span class="header-section-number">A</span> NEWS</a></li>
 </ul>
 
         <div class="book-extra">
@@ -64,7 +67,7 @@
 </h1>
 <p>Appropriate citations must be included in help pages (e.g., in the see also section) and vignettes; this aspect of documentation is no different from any scientific endeavor.
 The file <code>inst/CITATION</code> can be used to specify how a package is to be cited.
-If this option is utilized, a maintainer can check proper formatting of the <code>CITATION</code> file by running <code><a href="https://rdrr.io/r/utils/citation.html">readCitationFile("inst/CITATION")</a></code>; This must run without error for the citation to be accurately displayed on the package landing page.</p>
+If this option is utilized, a maintainer can check proper formatting of the <code>CITATION</code> file by running <code>readCitationFile("inst/CITATION")</code>; This must run without error for the citation to be accurately displayed on the package landing page.</p>
 <p>Whether or not a <code>CITATION</code> file is present, an automatically-generated citation will appear on the package landing page on the <a href="https://bioconductor.org/"><em>Bioconductor</em></a> web site.
 For optimal formatting of author names (if a <code>CITATION</code> file is not present), specify the package author and maintainer using the <code>Authors@R</code> field as described in the <a href="http://cran.r-project.org/doc/manuals/R-exts.html">Writing R Extensions</a> manual.</p>
 
@@ -91,7 +94,7 @@ For optimal formatting of author names (if a <code>CITATION</code> file is not p
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>Bioconductor Package Guidelines for Developers and Reviewers</strong>" was written by Kevin Rue-Albrecht. It was last built on 2021-06-02.</p>
+    <p>"<strong>Bioconductor Package Guidelines for Developers and Reviewers</strong>" was written by Kevin Rue-Albrecht, Daniela Cassol, Johannes Rainer. It was last built on 2021-06-21.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
